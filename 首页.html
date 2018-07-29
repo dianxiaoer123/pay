@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+ <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<!-- Font Awesome CSS -->
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<!-- Fontello CSS -->
+		<link href="css/fontello.css" rel="stylesheet">
+		<link href="css/iconfont.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+		<!-- Animations -->
+		<link rel="stylesheet" type="text/css" href="css/animations.min.css">
+		<!-- Style Theme -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!-- Responsive Theme -->
+		<link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+
+		<link href="css/toastr.min.css" rel="stylesheet">
+		<link href="css/kefu.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/index.css">
+		<!--[if lt IE 9]-->
+		<script type="text/javascript" src="js/html5shiv.js"></script>
+		<script type="text/javascript" src="js/selectivizr.js"></script>
+		<!--[endif]-->
+</head>
+
+	<body>
+		<div class="wrapper">
+			<header class="transparent">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<div class="logo">
+							<a href="#">
+								<img src="images/logo.png" alt="logo">
+							</a>
+						</div>
+					</div>
+					<div class="col-md-7">
+						<ul class="menu">
+							<li><a href="首页.html">网站首页</a></li>
+
+							<li class="children"><a href="javascript:;">新手引导</a>
+								<ul class="sub-menu">
+									<li><a href="注册.html">免费注册</a></li>
+									<li><a href="API文档.html">API文档</a></li>
+									<li><a href="常见问题.html">常见问题</a></li>
+								</ul>
+						    </li>
+						 
+							<li class="children"><a href="javascript:;">API接入文档</a>
+								<ul class="sub-menu">
+									<li><a href="准备工作.html">准备工作</a></li>
+									<li><a href="付款接口.html">付款接口</a></li>
+									<li><a href="订单查询.html">订单查询</a></li>
+								</ul>
+							</li>
+							<li class="children"><a href="javascript:;">帮助中心</a>
+								<ul class="sub-menu">
+									<li><a href="接入常见问题.html">接入常见问题</a></li>
+									<li><a href="使用问题.html">使用问题</a></li>
+								</ul>
+							</li>
+
+							<li><a href="关于我们.html">关于我们</a></li>
+							
+						</ul>
+					</div>
+					
+					<div class="col-md-3">
+					
+						<div class="button-header">
+							<a href="登录.html" class="custom-btn login">登录</a>
+						    <a href="注册.html" class="custom-btn">注册</a>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="mobile-block">
+				<div class="logo-mobile">
+					<a href="#"><img src="images/logo.png" alt="logo"></a>
+				</div>
+				<a href="javascript:;" class="mobile-menu-btn"><span></span></a>
+				<div class="mobile-menu">
+					<div class="inside">
+						<div class="logo">
+							<a href="#" style="display: inline-block;"><img src="images/logo.png" alt="logo"></a>
+						</div>
+						<!--logo-->
+						<ul class="menu panel-group" id="accordion" aria-multiselectable="true">
+							<li><a href="首页.html">网站首页</a></li>
+							<li class="children panel">
+								<a href="新手引导.html" 
+								class="collapsed" 
+								data-toggle="collapse" 
+								data-parent="#accordion" 
+								aria-expanded="false" 
+								aria-controls="menu1">新手引导</a>
+								<ul class="sub-menu panel-collapse collapse" id="menu1">
+									<li><a href="注册.html">免费注册</a></li>
+									<li><a href="API文档.html">API文档</a></li>
+									<li><a href="常见问题.html">常见问题</a></li>
+								</ul>
+						    </li>
+							<li class="children panel">
+								<a href="API接入文档.html" 
+								class="collapsed" 
+								data-toggle="collapse" 
+								data-parent="#accordion" 
+								aria-expanded="false" 
+								aria-controls="menu2">API接入文档</a>
+								<ul class="sub-menu panel-collapse collapse" id="menu2">
+									<li><a href="准备工作.html">准备工作</a></li>
+									<li><a href="付款接口.html">付款接口</a></li>
+									<li><a href="订单查询.html">订单查询</a></li>
+								</ul>
+							</li>
+							<li class="children panel">
+								<a href="帮助中心.html"
+								 class="collapsed" 
+								 data-toggle="collapse" 
+								 data-parent="#accordion" 
+								 aria-expanded="false" 
+								 aria-controls="menu3">帮助中心</a>
+								<ul class="sub-menu panel-collapse collapse" id="menu3">
+									<li><a href="接入常见问题.html">接入常见问题</a></li>
+									<li><a href="使用问题.html">使用问题</a></li>
+								</ul>
+							</li>
+							<li><a href="关于我们.html">关于我们</a></li>
+							
+						</ul>
+						<!--menu-->
+						
+						<div class="button-header">
+							<a href="登录.html" class="custom-btn login">登录</a> 
+							<a href="注册.html" class="custom-btn">注册</a>
+								
+						</div>
+					</div>
+				
+				</div>
+				<!--mobile-menu-->
+			</div>
+		</header>
+
+	<div class="base-slider owl-carousel owl-theme bg-gray owl-loaded owl-drag">
+	<div class="owl-stage-outer">
+		<div class="owl-stage">
+		 <div class="item">
+			<img src="images/bg-test.png" alt="slider">
+			<div class="inside">
+				<h2>个人及时到账轮询收款助手</h2>
+				<p>99%超高成功率，直接收款到微信支付宝，安全稳定。</p>
+				<a href="注册.html" class="custom-btn">现在开户</a>
+			</div> 
+		</div>
+		<div class="item">
+		  <img src="images/bg-test.png" alt="slider">
+		  <div class="inside">
+		    <h2>无需提供账户密码，资金 100 % 安全 </h2>
+			<p>无需提现，资金直接进您的支付宝微信</p>
+			<a href="注册.html" class="custom-btn">现在开户</a>
+		</div> 
+	</div>
+</div>
+</div>
+<div class="owl-nav">
+	<div class="owl-prev">
+		<img src="images/arrow-left.png"></div>
+		<div class="owl-next">
+			<img src="images/arrow-right.png"></div>
+		</div>
+		<div class="owl-dots disabled"></div></div>
+
+     <section class="bg-gray">
+		<div class="container">
+			<div class="why-choose animatedParent">
+				<h2 class="title-head">超低费率，超高转化率</h2>
+
+				<div class="row">
+					<div class="col-md-4 col-xs-12 animated bounceInUp delay-250 go">
+						<div class="inside">
+							<img src="images/optimised.svg" alt="optimised">
+							<a href="javascript:;">极速响应</a>
+							<p>付款后立即回调，无等待，流程超顺畅</p>
+							<a href="注册.html" class="read-more">
+								立即开户<img src="images/right.png" alt="right">
+							</a>
+						</div> 
+					</div>
+					<div class="col-md-4 col-xs-12 animated bounceInUp delay-500 go">
+						<div class="inside">
+							<img src="images/powerfull.svg" alt="powerfull">
+							<a href="javascript:;">资金直达</a>
+							<p>收款不中转，资金直接入您收款账户</p>
+							<a href="注册.html" class="read-more">立即开户
+								<img src="images/right.png" alt="right">
+							</a>
+						</div>
+					</div>
+					<div class="col-md-4 col-xs-12 animated bounceInUp delay-750 go">
+						<div class="inside">
+							<img src="images/website.svg" alt="website">
+							<a href="javascript:;">安全加密</a>
+							<p>全程交易加密，确保交易安全
+							</p>
+							<a href="注册.html" class="read-more">立即开户
+								<img src="images/right.png" alt="right">
+							</a>
+						</div> 
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<div class="section clearfix">
+
+		<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="space-bottom"></div>
+				<h1 class="text-center title">支付流程体验</h1>
+				<div class="separator"></div>
+				<p class="text-center">体验支付接入后您用户的付款流程，款项直入您支付宝账户无需中转，并即时回调</p>
+
+				<div class="row">
+					<div class="col-sm-3">
+					<div class="box-style-1 gray-bg">
+							<i class="iconfont iconfont-shouji"></i>
+							<h2>5分钱体验回调</h2>
+							<p>需要您使用支付宝支付5分钱,几秒后体验回调</p>
+							<button class="btn-default btn" id="demo1">立即支付</button>
+						</div>
+
+					</div>
+					<div class="col-sm-3">
+						<div class="box-style-1 gray-bg">
+							<i class="iconfont iconfont-umidd17"></i>
+							<h2>自定义金额测试</h2>
+							<form class="form-inline">
+								<p>
+								<input type="hidden" name="type" value="2">
+									<input id="amount" type="text" name="amount" class="form-control" placeholder="请输入金额" required="">
+								</p>
+							</form>
+							<button class="btn-default btn" id="demo2">立即支付</button>
+
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="box-style-1 gray-bg">
+							<i class="iconfont iconfont-shouji"></i>
+							<h2>调起支付宝APP</h2>
+							<p>无需扫码，点击支付。请用手机浏览器体验</p>
+							<button class="btn-default btn" id="demo3">手机上点这里</button>
+						</div>
+					</div>
+					<div class="col-sm-3">
+                        <div class="box-style-1 gray-bg">
+                            <i class="iconfont iconfont-tubiao41"></i>
+                            <h2>微信内支付</h2>
+                            <p>体验微信内，包括转发好友、朋友圈、公众号</p>
+							<a class="btn-default btn" id="demo4">
+							点击扫码支付
+							</a>
+		            </div>
+                    </div>	
+				</div>
+
+			</div>
+			
+		</div>
+	</div>
+
+	</div>
+	<div class="pricing-table choice-plan animatedParent">
+		<div class="container">
+			<h2 class="title-head">套餐选择 / Pricing</h2>
+			<p>多种套餐选择，即开即用</p>
+			<ul class="pricing-list">
+				<li class="animated bounceInLeft delay-250 go">
+					<div class="images">
+						<img src="images/basic-plan.svg" alt="basic-plan"></div>
+					<h5>超级版</h5>
+					<ul>
+						<li>低手续费</li>
+						<li>QQ群交流</li>
+						<li>API对接文档</li>
+						<li>在线客服支持</li>
+						<li>API对接指导</li>
+					</ul>
+                    <span><b>开户费</b></span>
+					<div class="price">￥ 0.00 <span>/月</span></div>
+                    <a href="注册.html" id="普通餐" class="custom-btn group_id">立即使用</a>
+				</li>
+		</ul>
+			<div class="info-pricing animated bounceInRight delay-250 go">
+				<h4>为什么选择我们?</h4>
+				<ul>
+					<li>
+						<h6>多账号收款</h6>
+						<p>一个商户可无上限添加收款账号，自动轮训，资金风控。</p>
+					</li>
+					<li class="right">
+						<h6>个人收款</h6>
+						<p>资金直接到收款账号，不经过三方支付机构中转，更加安全，而且支持企业支付宝</p>
+					</li>
+				</ul>
+				<ul class="right">
+					<li>
+						<h6>超低费率</h6>
+						<p>超低的手续费，打破支付行业冰点价，只为更好的服务</p>
+					</li>
+					<li class="button right">
+						<a href="注册.html" class="custom-btn">点击这里开户</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+			<footer>
+			<div class="container">
+				<div class="widget-footer">
+					<h4>使用帮助</h4>
+					<ul>
+						<li><a href="注册.html">免费注册</a></li>
+						<li><a href="API文档.html">API文档</a></li>
+						<li><a href="常见问题.html">常见问题</a></li>
+					</ul>
+				</div>
+				 
+				<div class="widget-footer">
+					<h4>准备工作</h4>
+					<ul>
+						<li><a href="准备工作.html">准备工作</a></li>
+						<li><a href="付款接口.html">付款接口</a></li>
+						<li><a href="订单查询.html">订单查询</a></li>
+					</ul>
+				</div>
+			
+				<div class="widget-footer">
+					<h4>API文档</h4>
+					<ul>
+						<li><a href="接入常见问题.html">接入常见问题</a></li>
+						<li><a href="使用问题.html">使用问题</a></li>
+					</ul>
+				</div>
+			 
+				<div class="widget-footer">
+					<h4>联系我们</h4>
+						<ul>
+						<li><a target="_blank" href="javascript:void(0)">售前QQ：741479997</a></li>
+						<li><a target="_blank" href="javascript:void(0)">技术QQ：741479997</a></li>
+						<li><a>邮箱：tpayapi.com</a></li>
+					</ul>
+				</div>
+			 
+				<div class="widget-footer last">
+					<a href="#" style="display: inline-block;">
+					    <img src="images/logo.png" alt="">
+						<p>专为个人收款而生的支付工具。为支付宝、微信支付的个人账户，提供即时到账收款API接口。安全可靠，费率低。</p>
+
+				</div>
+			
+				<div class="copyright">
+					<p>© Copyright 2018 TPay免签支付, All Rights Reserved</p>
+				</div>
+			
+			</div>
+		</footer>
+
+		</div>
+	
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/modernizr.min.js"></script>
+		<script type="text/javascript" src="js/jquery.themepunch.tools.min.js"></script>
+		<script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
+		<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+		<script type="text/javascript" src="js/owl.carousel.js"></script>
+		<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+		<script type="text/javascript" src="js/jquery.countto.js"></script>
+		<script src="js/jquery-parallax.js"></script>
+		<script src="js/jquery.validate.js"></script>
+		<!-- <script src="js/messages_zh.js"></script> -->
+		<script src="js/toastr.min.js"></script>
+		<!-- <script type="text/javascript" src="js/template.js"></script> -->
+		<script type="text/javascript" src="js/custom.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/css3-animate-it.js"></script>
+		<script src="js/counter.js"></script>
+		<script src="js/main.js"></script>
+
+	<!-- 客服部分 -->
+	<div style="right: -230px;" class="contactusdiyou">
+		<div class="hoverbtn">
+			<span>联</span><span>系</span><span>我</span><span>们</span>
+			<img class="hoverimg" src="images/hoverbtnbg.gif" height="9" width="13">
+		</div>
+		<div class="conter">
+			<div class="con1">
+				<dl class="fn_cle">
+					<dt><img src="images/zxkfqq.png" height="31" width="31"></dt>
+					<dd class="f1">咨询QQ：</dd>
+					<dd class="f2">
+						<span class="ph_num">874455351</span>
+					</dd>
+				</dl>
+			</div>
+			<div class="blank0"></div>
+			<div class="qqcall">
+				<dl class="fn_cle">
+					<dt><img src="images/zxkfqq.png" height="31" width="31"></dt>
+					<dd class="f1 f_s14">在线客服：</dd>
+						
+					<dd class="f2 kefuQQ">
+						<span>客服</span>
+						<a target="_blank" href="javascript:void(0)"></a><br>
+					</dd>
+					<dt><img src="images/zxkfqq.png" height="31" width="31"></dt>
+					<dd class="f2 kefuQQ">
+						<span>交流群</span>
+						<a target="_blank" href="#">
+							<img border="0" src="images/group.png"></a><br>
+					</dd>
+			   </dl>
+			</div>
+			<div class="blank0"></div>
+			<div class="weixincall">
+				<dl class="fn_cle">
+					<dt><img src="images/zxkfqq.png" height="31" width="31"></dt>
+					<dd class="f1">QQ交流群：</dd>
+					<dd class="f3">
+						<a target="_blank" href="images/qun_code.jpg">
+							<img src="images/qun_code.jpg" height="73" width="73">
+						</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="blank0"></div>
+			<div class="dytimer">
+				<span style="font-weight: bold;">公司官网：</span>
+				<span><a href="#" style="color:white">www.tpayapi.com</a></span>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	$(function() {
+		$(".contactusdiyou").hover(function() {
+			$(".hoverimg").attr("src","images/hoverbtnbg1.gif");
+			$('.diyoumask').fadeIn();
+			$('.contactusdiyou').animate({right:'0'},300);
+		}, function() {
+			$(".hoverimg").attr("src","images/hoverbtnbg.gif");
+			$('.contactusdiyou').animate({right:'-230px'},300,function(){});
+			$('.diyoumask').fadeOut();
+		});
+	});
+	</script>
+	
+	</body>
+</html>

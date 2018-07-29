@@ -1,0 +1,118 @@
+.modal-content .modal-header {
+    background-color: #0071ff;
+}
+.modal-title {
+    margin: 0;
+    line-height: 1.42857143;
+}
+.modal-content .modal-title {
+    font-size: 24px;
+    color: #ffffff;
+}
+.select{
+	width: 100%;
+	color: #686868;
+}
+.btn {
+    padding: 10px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    min-width: 160px;
+    text-align: center;
+    border-radius: 0;
+    text-transform: uppercase;
+    margin: 10px 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.btn-default {
+    background-color: #e84c3d;
+    color: #fff !important;
+    border-color: #cd3c2e;
+}
+.btn-default {
+    background: linear-gradient(to right,#00b4ff 0, #0071ff 100%);
+    border-color: transparent;
+    border: none;
+}
+.section {
+    padding: 25px 0;
+	color: #666666;
+}
+.space-bottom {
+    padding-bottom: 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #343434;
+    line-height: 1.2;
+}
+h1 {
+    font-size: 38px;
+    font-weight: 700;
+}
+@media (min-width: 992px){
+.title {
+    margin-top: 0;
+}
+}
+.separator {
+    display: block;
+    width: 60px;
+    height: 5px;
+    margin: 15px auto 15px;
+    background-color: #cccccc;
+    position: relative;
+    border: 1px solid #cccccc;
+}
+.separator:after {
+    width: 30px;
+    height: 5px;
+    background: #333333;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    content: "";
+}
+p {
+    margin-bottom: 20px;
+}
+.gray-bg {
+    background-color: #f1f1f1;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.13) !important;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.13) !important;
+    position: relative;
+}
+.gray-bg:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    height: 5px;
+    content: "";
+    width: 100%;
+    -webkit-box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.13);
+    box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.13);
+}
+.box-style-1 {
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+}
+.box-style-1 i {
+    font-size: 90px;
+    margin: 15px 0 5px;
+    text-align: center;
+	line-height: 128px;
+}
+h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+	margin-top: 20px;
+	color: #343434;
+}
+form {
+    margin: 20px 0;
+}
