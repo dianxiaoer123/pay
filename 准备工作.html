@@ -2,7 +2,7 @@
 <html lang="zh-cn">
  <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>首页</title>
+    <title>准备工作</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link href="css/font-awesome.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
 
 	<body>
 		<div class="wrapper">
-			<header class="transparent">
+			<header>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-2">
@@ -143,178 +143,70 @@
 			</div>
 		</header>
 
-	<div class="base-slider owl-carousel owl-theme bg-gray owl-loaded owl-drag">
-	<div class="owl-stage-outer">
-		<div class="owl-stage">
-		 <div class="item">
-			<img src="images/bg-test.png" alt="slider">
-			<div class="inside">
-				<h2>个人及时到账轮询收款助手</h2>
-				<p>99%超高成功率，直接收款到微信支付宝，安全稳定。</p>
-				<a href="注册.html" class="custom-btn">现在开户</a>
-			</div>
-		</div>
-		<div class="item">
-		  <img src="images/bg-test.png" alt="slider">
-		  <div class="inside">
-		    <h2>无需提供账户密码，资金 100 % 安全 </h2>
-			<p>无需提现，资金直接进您的支付宝微信</p>
-			<a href="注册.html" class="custom-btn">现在开户</a>
-		</div>
-	</div>
-</div>
-</div>
-<div class="owl-nav"></div>
-<div class="owl-dots disabled"></div></div>
+		<div class="main-container  container">
+			<div class="row animatedParent">
+					<div class="col-md-3 col-xs-12">
+							<!--===================== Sidebar ========================-->
+							<aside class="animated bounceInRight go">
+									<!--===================== Widget Categories ========================-->
+									<div class=" widget">
+											<h4 class="widget-title">API接入文档</h4>
+											<ul class="nav nav-pills nav-stacked">
+													<li class="active"><a href="/docindex">准备工作</a></li>
+										<li><a href="/docpay">发起付款接口</a></li>
+										<li><a href="/docgetinfo">查询接口</a></li>
+										<li><a href="/docdemo">Demo下载</a></li>
+											</ul>
+									</div>
 
-     <section class="bg-gray">
-		<div class="container">
-			<div class="why-choose animatedParent">
-				<h2 class="title-head">超低费率，超高转化率</h2>
-
-				<div class="row">
-					<div class="col-md-4 col-xs-12 animated bounceInUp delay-250 go">
-						<div class="inside">
-							<img src="images/optimised.svg" alt="optimised">
-							<a href="javascript:;">极速响应</a>
-							<p>付款后立即回调，无等待，流程超顺畅</p>
-							<a href="注册.html" class="read-more">
-								立即开户<img src="images/right.png" alt="right">
-							</a>
-						</div>
+							</aside>
+							<!--===================== End of Sidebar ========================-->
 					</div>
-					<div class="col-md-4 col-xs-12 animated bounceInUp delay-500 go">
-						<div class="inside">
-							<img src="images/powerfull.svg" alt="powerfull">
-							<a href="javascript:;">资金直达</a>
-							<p>收款不中转，资金直接入您收款账户</p>
-							<a href="注册.html" class="read-more">立即开户
-								<img src="images/right.png" alt="right">
-							</a>
-						</div>
-					</div>
-					<div class="col-md-4 col-xs-12 animated bounceInUp delay-750 go">
-						<div class="inside">
-							<img src="images/website.svg" alt="website">
-							<a href="javascript:;">安全加密</a>
-							<p>全程交易加密，确保交易安全
-							</p>
-							<a href="注册.html" class="read-more">立即开户
-								<img src="images/right.png" alt="right">
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
 
-		</div>
-	</section>
+					<div class="col-md-9 col-xs-12">
+							<article class="post animated bounceInLeft go">
+									<div class="top-post">
+											<h3><a href="javascript:;"> 准备工作</a></h3>
+									</div><!--top-post-->
+									<div class="bottom-post">
+											<p>
 
-	<div class="section clearfix">
-
-		<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="space-bottom"></div>
-				<h1 class="text-center title">支付流程体验</h1>
-				<div class="separator"></div>
-				<p class="text-center">体验支付接入后您用户的付款流程，款项直入您支付宝账户无需中转，并即时回调</p>
-
-				<div class="row">
-					<div class="col-sm-6 col-md-3">
-					<div class="box-style-1 gray-bg">
-							<i class="iconfont iconfont-shouji"></i>
-							<h2>5分钱体验回调</h2>
-							<p>需要您使用支付宝支付5分钱,几秒后体验回调</p>
-							<button class="btn-default btn" id="demo1">立即支付</button>
-						</div>
+											</p><h5>欢迎接入TPAY免签支付支付接口。</h5>
+					<h5>在接入之前，请先确认是否完成以下3步：</h5>
+					<table class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>必要前提</th>
+								<th>说明</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td><small>已有UID、AID和密钥。</small></td>
+								<td><small>注册账号，在“我的TPAY”-“收款账号配置”中获取。</small></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td><small>已上传支付宝，微信收款二维码</small></td>
+								<td><small>可能用到的定额二维码多多益善。在“我的TPAY”-“收款账号配置”-“详情”中选择设备上传或者自助上传。</small></td>
+							</tr>
+						</tbody>
+					</table>
+					<h5>完成以上2步，就可以开始接入API接口了。(点左侧导航)</h5>
+											<p></p>
+									</div><!--bottom-post-->
+							</article>
 
 					</div>
-					<div class="col-sm-6 col-md-3">
-						<div class="box-style-1 gray-bg">
-							<i class="iconfont iconfont-umidd17"></i>
-							<h2>自定义金额测试</h2>
-							<form class="form-inline">
-								<p>
-								<input type="hidden" name="type" value="2">
-									<input id="amount" type="text" name="amount" class="form-control" placeholder="请输入金额" required="">
-								</p>
-							</form>
-							<button class="btn-default btn" id="demo2">立即支付</button>
-
-						</div>
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<div class="box-style-1 gray-bg">
-							<i class="iconfont iconfont-shouji"></i>
-							<h2>调起支付宝APP</h2>
-							<p>无需扫码，点击支付。请用手机浏览器体验</p>
-							<button class="btn-default btn" id="demo3">手机上点这里</button>
-						</div>
-					</div>
-					<div class="col-sm-6 col-md-3">
-                        <div class="box-style-1 gray-bg">
-                            <i class="iconfont iconfont-tubiao41"></i>
-                            <h2>微信内支付</h2>
-                            <p>体验微信内，包括转发好友、朋友圈、公众号</p>
-							<a class="btn-default btn" id="demo4">
-							点击扫码支付
-							</a>
-		            </div>
-                    </div>
-				</div>
 
 			</div>
-
-		</div>
 	</div>
 
-	</div>
-	<div class="pricing-table choice-plan animatedParent">
-		<div class="container">
-			<h2 class="title-head">套餐选择 / Pricing</h2>
-			<p>多种套餐选择，即开即用</p>
-			<ul class="pricing-list">
-				<li class="animated bounceInLeft delay-250 go">
-					<div class="images">
-						<img src="images/basic-plan.svg" alt="basic-plan"></div>
-					<h5>超级版</h5>
-					<ul>
-						<li>低手续费</li>
-						<li>QQ群交流</li>
-						<li>API对接文档</li>
-						<li>在线客服支持</li>
-						<li>API对接指导</li>
-					</ul>
-                    <span><b>开户费</b></span>
-					<div class="price">￥ 0.00 <span>/月</span></div>
-                    <a href="注册.html" id="普通餐" class="custom-btn group_id">立即使用</a>
-				</li>
-		</ul>
-			<div class="info-pricing animated bounceInRight delay-250 go">
-				<h4>为什么选择我们?</h4>
-				<ul>
-					<li>
-						<h6>多账号收款</h6>
-						<p>一个商户可无上限添加收款账号，自动轮训，资金风控。</p>
-					</li>
-					<li class="right">
-						<h6>个人收款</h6>
-						<p>资金直接到收款账号，不经过三方支付机构中转，更加安全，而且支持企业支付宝</p>
-					</li>
-				</ul>
-				<ul class="right">
-					<li>
-						<h6>超低费率</h6>
-						<p>超低的手续费，打破支付行业冰点价，只为更好的服务</p>
-					</li>
-					<li class="button right">
-						<a href="注册.html" class="custom-btn">点击这里开户</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
+	<div class="pre-footer"><img src="https://imgcdn.xinlis.com/static/index/assets/images/line-prefoter.svg" alt="bg-prefooter"></div>
+
+
 			<footer>
 			<div class="container">
 				<div class="widget-footer">
