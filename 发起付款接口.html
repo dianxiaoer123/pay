@@ -3,7 +3,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>准备工作</title>
+	<title>发起付款接口</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -177,17 +177,17 @@
 		</header>
 
 
-		<div class="main-container  container">
+		<div class="main-container container">
 			<div class="row animatedParent">
 				<div class="col-md-3 col-xs-12">
 					<aside class="animated bounceInRight go">
-						<div class=" widget">
+						<div class="widget">
 							<h4 class="widget-title">API接入文档</h4>
 							<ul class="nav nav-pills nav-stacked">
-								<li class="active">
+								<li>
 									<a href="准备工作.html">准备工作</a>
 								</li>
-								<li>
+								<li class="active">
 									<a href="发起付款接口.html">发起付款接口</a>
 								</li>
 								<li>
@@ -195,6 +195,7 @@
 								</li>
 							</ul>
 						</div>
+
 					</aside>
 
 				</div>
@@ -203,20 +204,33 @@
 					<article class="post animated bounceInLeft go">
 						<div class="top-post">
 							<h3>
-								<a href="javascript:;"> 准备工作</a>
+								<a href="javascript:;"> 发起付款接口</a>
 							</h3>
 						</div>
+						<!--top-post-->
 						<div class="bottom-post">
-							<p>
+							<p>我方平台提供有2种支付场景，可根据业务选择使用：</p>
+							<h3>场景一：跳转我方平台支付网关支付</h3>
+							<b>跳转支付页接口URL：</b>
+							<pre>http://pay.tpayapi.com</pre>
+							<b>传参方式：Post</b>
+							<p>使用方法：用表单post的方式，post参数并跳转到此网址，显示我们的支付页。</p>
+							<hr>
+							<h3>场景二：自定义支付页</h3>
+							<b>获取支付json数据接口URL：</b>
+							<pre>http://pay.tpayapi.com?format=json</pre>
+							<b>传参方式：Post</b>
+							<p>说明：用curl的post方式传参数，并直接获取json返回值，显示在您自定义的支付页上。</p>
+							<hr>
 
-							</p>
-							<h5>欢迎接入TPAY免签支付支付接口。</h5>
-							<h5>在接入之前，请先确认是否完成以下3步：</h5>
+							<h5>请求参数：</h5>
 							<table class="table table-striped table-bordered">
 								<thead>
 									<tr>
 										<th>#</th>
-										<th>必要前提</th>
+										<th>参数名</th>
+										<th>含义</th>
+										<th>类型</th>
 										<th>说明</th>
 									</tr>
 								</thead>
@@ -224,25 +238,264 @@
 									<tr>
 										<td>1</td>
 										<td>
-											<small>已有UID、AID和密钥。</small>
+											<small>uid</small>
 										</td>
 										<td>
-											<small>注册账号，在“我的TPAY”-“收款账号配置”中获取。</small>
+											<small>商户uid</small>
+										</td>
+										<td>
+											<small>int(11)</small>
+										</td>
+										<td>
+											<small>必填。您的商户唯一标识，注册后在收款账号配置里获得。</small>
 										</td>
 									</tr>
 									<tr>
 										<td>2</td>
 										<td>
-											<small>已上传支付宝，微信收款二维码</small>
+											<small>qr_amount</small>
 										</td>
 										<td>
-											<small>可能用到的定额二维码多多益善。在“我的TPAY”-“收款账号配置”-“详情”中选择设备上传或者自助上传。</small>
+											<small>价格</small>
+										</td>
+										<td>
+											<small>decimal(10,2)</small>
+										</td>
+										<td>
+											<small>必填。单位：元，此处如果是</small>
+										</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>
+											<small>notify_url</small>
+										</td>
+										<td>
+											<small>通知回调网址</small>
+										</td>
+										<td>
+											<small>string(255)</small>
+										</td>
+										<td>
+											<small>必填。用户支付成功后，我们服务器会主动发送一个post消息到这个网址。由您自定义。不要urlencode。例：http://www.tpayapi.com/notify</small>
+										</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>
+											<small>return_url</small>
+										</td>
+										<td>
+											<small>跳转网址</small>
+										</td>
+										<td>
+											<small>string(255)</small>
+										</td>
+										<td>
+											<small>必填。用户支付成功后，我们会让用户浏览器自动跳转到这个网址。由您自定义。不要urlencode。例：http://www.tpayapi.com/return</small>
+										</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>
+											<small>order_number</small>
+										</td>
+										<td>
+											<small>商户自定义订单号</small>
+										</td>
+										<td>
+											<small>string(128)</small>
+										</td>
+										<td>
+											<small>必填。我们会据此判别是同一笔订单还是新订单。我们回调时，会带上这个参数。例：201701160027368885458</small>
+										</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>
+											<small>order_uid</small>
+										</td>
+										<td>
+											<small>商户自定义客户号</small>
+										</td>
+										<td>
+											<small>string(128)</small>
+										</td>
+										<td>
+											<small>必填。我们会显示在您后台的订单列表中，方便您看到是哪个用户的付款，方便后台对账。可以填用户名，也可以填您数据库中的用户uid。例：xxx, xxx@aaa.com</small>
+										</td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>
+											<small>key</small>
+										</td>
+										<td>
+											<small>秘钥</small>
+										</td>
+										<td>
+											<small>string(32)</small>
+										</td>
+										<td>
+											<small>必填。把使用到的所有参数，
+												<strong>连密钥一起</strong>，按
+												<mark>参数名</mark>字母升序排序。把
+												<mark>参数值</mark>拼接在一起。做md5-32位加密，取字符串大写。得到key。网址类型的参数值不要urlencode。</small>
+										</td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td>
+											<small>type</small>
+										</td>
+										<td>
+											<small>支付渠道</small>
+										</td>
+										<td>
+											<small>int(11)</small>
+										</td>
+										<td>
+											<small>必填。1：支付宝； 2：微信</small>
 										</td>
 									</tr>
 								</tbody>
 							</table>
-							<h5>完成以上2步，就可以开始接入API接口了。(点左侧导航)</h5>
-							<p></p>
+							<p>key的拼接顺序：如用到了所有参数，就按这个顺序拼接：notify_url + order_number + order_uid + qr_amount + return_url + type + uid + merkey(merkey不参与排序)</p>
+							<p>如:notify_url=1；order_number=2；order_uid=3；qr_amount=4</p>
+							<p>那么加密拼接应该为1234,不要‘=’、‘?’、‘&amp;’等</p>
+							<p class="text-danger">
+								<strong>注意：merkey在安全上非常重要，一定不要显示在任何网页代码、网址参数中。只可以放在服务端。计算key时，先在服务端计算好，把计算出来的key传出来。严禁在客户端计算key，严禁在客户端存储merkey。</strong>
+							</p>
+							<h5>Json请求【成功】的返回值：</h5>
+							<pre>{
+    //0失败 1成功
+    "ret": 1,
+    "data": {
+        //显示给用户的订单金额(一定要把这个价格显示在支付页上，而不是订单金额)
+        "amount": "108",
+        //订单号
+        "order_number": "A2018010112376",
+        // //二维码信息，如果没返回，说明存在错误，参考msg的信息
+        "qr_code": "HTTPS://QR.ALIPAY.COM/FKX00849HD6HRIS0QETICA",
+        //判断支付成功后，要同步跳转的URL
+        "return_url": "http:baidu.com/return",
+        //支付渠道：1-支付宝；2-微信
+        "type": 1
+    },
+    ////提示给用户的文字信息，会根据不同场景，展示不同内容
+    "message": "付款即时到账 未到账可联系我们",
+    "list": null,
+    "map": null
+}
+						   </pre>
+							<h5>----------------------------压缩格式------------------------------------</h5>
+							<pre>{"ret":1,"data":{"amount":"108","order_number":"A2018010112376","qr_code":"HTTPS://QR.ALIPAY.COM/FKX00849HD6HRIS0QETICA","return_url":"http:baidu.com/return","type":1},"message":"付款即时到账 未到账可联系我们","list":null,"map":null}</pre>
+							<h5>Json请求【失败】的返回值：</h5>
+							<pre>						   {
+	//0失败 1成功
+	"ret": 0,
+	"data": null,
+	//错误信息
+	"message": "未找到参数:return_url",
+	"list": null,
+	"map": null
+}
+						   </pre>
+							<h5>----------------------------压缩格式------------------------------------</h5>
+							<pre>{"ret":0,"data":null,"message":"未找到参数:return_url","list":null,"map":null}</pre>
+							<div class="space-bottom"></div>
+							<div class="space-bottom"></div>
+							<!-- page-title start -->
+							<!-- ================ -->
+							<br>
+							<br>
+							<!-- page-title start -->
+							<!-- ================ -->
+							<h4 class="page-title">付款成功回调通知</h4>
+							<hr>
+							<!-- page-title end -->
+
+							<p>用户付款成功后，我们会向您在发起付款接口传入的
+								<mark>notify_url</mark>网址发送通知。您的服务器只要返回200状态，就表示回调已收到。如果返回状态不是200，我们会再尝试回调3次，每次间隔1分钟。</p>
+							<h5>传参方式：Post</h5>
+							<h5>参数内容：</h5>
+							<table class="table table-striped table-bordered">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>参数名</th>
+										<th>含义</th>
+										<th>类型</th>
+										<th>说明</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>
+											<small>amount</small>
+										</td>
+										<td>
+											<small>实际支付金额</small>
+										</td>
+										<td>
+											<small>string(128)</small>
+										</td>
+										<td>
+											<small>一定存在。用户实际付款金额</small>
+										</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>
+											<small>order_number</small>
+										</td>
+										<td>
+											<small>订单号</small>
+										</td>
+										<td>
+											<small>string(128)</small>
+										</td>
+										<td>
+											<small>一定存在。是您在发起付款接口传入的您的自定义订单号</small>
+										</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>
+											<small>key</small>
+										</td>
+										<td>
+											<small>秘钥</small>
+										</td>
+										<td>
+											<small>string(32)</small>
+										</td>
+										<td>
+											<small>一定存在。我们把使用到的所有参数，
+												<strong>连您的merkey一起</strong>，按
+												<mark>参数名</mark>字母升序排序。把
+												<mark>参数值</mark>拼接在一起。做md5-32位加密，取字符串大写。得到key。您需要在您的服务端按照同样的算法，自己验证此key是否正确。只在正确时，执行您自己逻辑中支付成功代码。</small>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<p>key的拼接顺序：如用到了所有参数，就按这个顺序拼接：amount + order_number + merkey(merkey不参与排序)</p>
+							<div class="space-bottom"></div>
+							<div class="space-bottom"></div>
+							<!-- page-title start -->
+							<!-- ================ -->
+							<h4 class="page-title">付款成功自动跳转</h4>
+							<hr>
+							<!-- page-title end -->
+
+							<p>用户付款成功后，我们会在先通过上面的接口，通知您服务器付款成功，再过1-3秒后将用户跳转到您在发起付款接口传入的
+								<mark>return_url</mark>网址。</p>
+							<p class="text-danger">
+								<strong>注意：请不要将此跳转认为是用户付款成功的判断条件，此行为极不安全。请根据我们的付款成功回调通知是否送到，来判断交易是否成功。</strong>
+							</p>
+							<div class="space-bottom"></div>
+							<div class="space-bottom"></div>
 						</div>
 						<!--bottom-post-->
 					</article>
@@ -251,7 +504,6 @@
 
 			</div>
 		</div>
-
 		<div class="pre-footer">
 			<img src="images/line-prefoter.svg" alt="bg-prefooter">
 		</div>
@@ -329,7 +581,10 @@
 
 			</div>
 		</footer>
+
 	</div>
+
+
 
 	<!-- 客服部分 -->
 	<div style="right: -230px;" class="contactusdiyou">
@@ -401,7 +656,6 @@
 			</div>
 		</div>
 	</div>
-
 
 	<script type="text/javascript">
 		$(function () {

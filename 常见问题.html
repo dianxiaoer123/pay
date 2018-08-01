@@ -3,10 +3,10 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>准备工作</title>
+	<title>常见问题</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" type="text/css" href="css/animations.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -176,25 +176,24 @@
 			</div>
 		</header>
 
-
-		<div class="main-container  container">
+		<div class="main-container container">
 			<div class="row animatedParent">
 				<div class="col-md-3 col-xs-12">
+
 					<aside class="animated bounceInRight go">
+
 						<div class=" widget">
-							<h4 class="widget-title">API接入文档</h4>
+							<h4 class="widget-title">常见问题解答</h4>
 							<ul class="nav nav-pills nav-stacked">
 								<li class="active">
-									<a href="准备工作.html">准备工作</a>
+									<a href="常见问题.html">接入问题</a>
 								</li>
 								<li>
-									<a href="发起付款接口.html">发起付款接口</a>
-								</li>
-								<li>
-									<a href="查询接口.html">查询接口</a>
+									<a href="使用过程中问题.html">使用过程中问题</a>
 								</li>
 							</ul>
 						</div>
+
 					</aside>
 
 				</div>
@@ -203,46 +202,87 @@
 					<article class="post animated bounceInLeft go">
 						<div class="top-post">
 							<h3>
-								<a href="javascript:;"> 准备工作</a>
+								<a href="javascript:;">常见接入问题解答</a>
 							</h3>
 						</div>
+						<!--top-post-->
 						<div class="bottom-post">
-							<p>
-
-							</p>
-							<h5>欢迎接入TPAY免签支付支付接口。</h5>
-							<h5>在接入之前，请先确认是否完成以下3步：</h5>
-							<table class="table table-striped table-bordered">
-								<thead>
-									<tr>
-										<th>#</th>
-										<th>必要前提</th>
-										<th>说明</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>1</td>
-										<td>
-											<small>已有UID、AID和密钥。</small>
-										</td>
-										<td>
-											<small>注册账号，在“我的TPAY”-“收款账号配置”中获取。</small>
-										</td>
-									</tr>
-									<tr>
-										<td>2</td>
-										<td>
-											<small>已上传支付宝，微信收款二维码</small>
-										</td>
-										<td>
-											<small>可能用到的定额二维码多多益善。在“我的TPAY”-“收款账号配置”-“详情”中选择设备上传或者自助上传。</small>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<h5>完成以上2步，就可以开始接入API接口了。(点左侧导航)</h5>
-							<p></p>
+							<!-- accordion start -->
+							<div class="panel-group panel-transparent" id="accordion-faq">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion-faq" href="#collapseOne" class="collapsed">
+												<i class="fa fa-question-circle pr-10"></i> 接入TPay后，我的支付宝、微信账号是否安全？
+											</a>
+										</h4>
+									</div>
+									<div id="collapseOne" class="panel-collapse collapse">
+										<div class="panel-body">
+											<p>非常安全。懂一点支付宝、微信的同学都知道，我们没有要求用户提供交易密码。所以我们从物理上就不存在盗取您支付宝资金的问题。</p>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion-faq" href="#collapseThree" class="collapsed">
+												<i class="fa fa-question-circle pr-10"></i> 使用TPay会不会导致我支付宝、微信号被封号？
+											</a>
+										</h4>
+									</div>
+									<div id="collapseThree" class="panel-collapse collapse">
+										<div class="panel-body">
+											<p>不会。因为用TPay的商户的支付宝、微信账户和普通个人账号没有任何区别，而且系统可以支持多账号轮询。</p>
+											<p>我们把可能会给您账号带来风险的因素都考虑到了，所以使用TPay是安全的。</p>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion-faq" href="#collapse4" class="collapsed">
+												<i class="fa fa-question-circle pr-10"></i> 用户付款是经过网站账号中转，还是直接付款到我自己的支付宝、微信账号？
+											</a>
+										</h4>
+									</div>
+									<div id="collapse4" class="panel-collapse collapse">
+										<div class="panel-body">
+											<p>是直接付款到您支付宝、微信账号的。您在网站首页体验的流程就是未来您用户付费的流程。</p>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion-faq" href="#collapse5" class="collapsed">
+												<i class="fa fa-question-circle pr-10"></i> 用户直接付款到我账户，你们平台怎么扣手续费？
+											</a>
+										</h4>
+									</div>
+									<div id="collapse5" class="panel-collapse collapse">
+										<div class="panel-body">
+											<p>您需要在后台充值一些余额。不用多，够支付手续费的就可以。</p>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<a data-toggle="collapse" data-parent="#accordion-faq" href="#collapse7" id="collapse7title" class="collapsed">
+												<i class="fa fa-question-circle pr-10"></i> 我不懂技术，也找不到人帮我接入，怎么办？
+											</a>
+										</h4>
+									</div>
+									<div id="collapse7" class="panel-collapse collapse ">
+										<div class="panel-body">
+											<p>联系客服，客服帮您找人接入，根据您的接入工作量复杂程度，会收取800-1200左右的接入费用。</p>
+											<p>或者您可以自行在猪八戒等威客网站找团队接入。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- accordion end -->
 						</div>
 						<!--bottom-post-->
 					</article>
@@ -329,6 +369,7 @@
 
 			</div>
 		</footer>
+
 	</div>
 
 	<!-- 客服部分 -->
@@ -401,7 +442,6 @@
 			</div>
 		</div>
 	</div>
-
 
 	<script type="text/javascript">
 		$(function () {

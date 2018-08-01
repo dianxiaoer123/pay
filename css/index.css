@@ -116,3 +116,6 @@ h2 {
 form {
     margin: 20px 0;
 }
+.go{
+    display: inline-block;
+}
